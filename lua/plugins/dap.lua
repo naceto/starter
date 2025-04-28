@@ -52,11 +52,25 @@ return {
         desc = "Debug: Restart",
       },
       {
+        "<S-F5>",
+        function()
+          require("dap").terminate()
+        end,
+        desc = "Debug: Stop Debugging",
+      },
+      {
         "<F17>",
         function()
           require("dap").terminate()
         end,
         desc = "Debug: Stop Debugging",
+      },
+      {
+        "<C-F10>",
+        function()
+          require("dap").run_to_cursor()
+        end,
+        desc = "Debug: Run to Cursor (Ctrl + F10)",
       },
       {
         "<F22>",
